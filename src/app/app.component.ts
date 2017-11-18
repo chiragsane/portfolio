@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-declare var $: any;
 
 @Component({
   selector: 'pf-root',
@@ -10,5 +9,4 @@ export class AppComponent implements OnInit {
   constructor() { }
   ngOnInit() {
   }
-  openModal = () => $('.ui.basic.modal').modal('show');
 }
