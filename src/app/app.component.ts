@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var $: any;
 
 @Component({
   selector: 'pf-root',
@@ -8,5 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   constructor() { }
   ngOnInit() {
+  }
+  nextSlide() {
+    console.log('next');
+  }
+  prevSlide() {
+    console.log('prev');
   }
 }
