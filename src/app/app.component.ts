@@ -7,13 +7,25 @@ declare var $: any;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  currentView = 0;
   constructor() { }
   ngOnInit() {
   }
   nextSlide() {
-    console.log('next');
+    document.getElementById(`view-${this.currentView}`).classList.remove('this');
+    document.getElementById(`view-${this.currentView}`).classList.add('prev');
+    this.currentView++;
+    document.getElementById(`view-${this.currentView}`).classList.remove('next');
+    document.getElementById(`view-${this.currentView}`).classList.add('this');
   }
   prevSlide() {
-    console.log('prev');
+    document.getElementById(`view-${this.currentView}`).classList.remove('this');
+    document.getElementById(`view-${this.currentView}`).classList.add('next');
+    this.currentView--;
+    document.getElementById(`view-${this.currentView}`).classList.remove('prev');
+    document.getElementById(`view-${this.currentView}`).classList.add('this');
+  }
+  scrolled(e) {
+    console.log(e);
   }
 }

@@ -1,8 +1,13 @@
-<div class="pf-page-container">
-    <div class="pf-page-container">
+<div class="pf-page-container" id="view">
+    <div class="pf-page-container this" id="view-0">
         <button (click)="nextSlide()">Next</button>
     </div>
-    <div class="pf-page-container">
+    <div class="pf-page-container next" id="view-1">
+        <button (click)="nextSlide()">Next</button>
+        <button (click)="prevSlide()">Previous</button>
+    </div>
+    <div class="pf-page-container next" id="view-2">
         <button (click)="prevSlide()">Previous</button>
     </div>
 </div>
+<!-- style="background-image: url('assets/images/img.JPG')" -->
